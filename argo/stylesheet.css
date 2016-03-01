@@ -1,0 +1,92 @@
+body {
+  margin-top:3em;
+		margin-bottom:5em;
+		font-family:sans-serif;
+		margin-right:auto;
+		margin-left:auto;
+  width:750px;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+h1 {
+  font-family:'Liberation Serif','Georgia',serif;
+  text-align:center;
+	font-size:4.5em;
+	font-weight:bold;
+}
+h2, h3 {
+  font-family:sans-serif;
+	text-align:center;
+}
+th, td {
+  border:1px solid black;
+}
+table {
+  border:2px solid black;
+  table-layout:fixed;
+  border-collapse: collapse;
+  width: 100%;
+}
+caption {
+  font-size:150%;
+  font-variant:small-caps;
+}
+table.rnk th {
+  background-color:navy;
+  color:white;
+  border-style:none;
+  text-align:center;
+}
+table.rnk tr:nth-child(even) {
+  background-color:lightgray;
+  border-style:none;
+}
+table.rnk td {
+  text-align:center;
+  border-style:none;
+}
+table.vip th {
+  background-color:green;
+  color:white;
+  border-style:none;
+  text-align:center;
+}
+table.vip td {
+  text-align:center;
+  border-style:none;
+}
+table.vip td:nth-child(odd) {
+  background-color:lightgray;
+}
+footer {
+  text-align: center;
+		padding-bottom: 1em;
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+  font-size: 0.8em;
+  font-weight: 300;
+}
+code {
+  font-family:monospace;
+  background:rgb(240, 240, 240);
+  font-size:120%;
+}
+/* Repurpose the <u> tag */
+u {
+  text-decoration:none;
+  font-variant:small-caps;
+}
+img:not( a > * ) {
+  display:block;
+  margin:0 auto;
+}
+.cads {
+  text-align:center;
+  font-family:'Arial Black',Gadget,san-serif;
+  text-transform:uppercase;
+}
+small {
+  font-size:65%;
+}

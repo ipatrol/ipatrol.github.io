@@ -1,149 +1,89 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta  content="text/html; charset=UTF-8"  http-equiv="content-type">
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
     <title>Weekly Argo</title>
-    <style type="text/css">
-      body {
-        margin-top:3em;
-				margin-bottom:5em;
-				font-family:sans-serif;
-				margin-right:auto;
-				margin-left:auto;
-        width:750px;
-      }
-      h1, h2, h3, h4, h5, h6 {
-        font-weight: 400;
-      }
-      h1 {
-        font-family:'Liberation Serif','Georgia',serif;
-        text-align:center;
-      	font-size:4.5em;
-      	font-weight:bold;
-      }
-      h2, h3 {
-        font-family:sans-serif;
-      	text-align:center;
-      }
-      th, td {
-        border:1px solid black;
-      }
-      table {
-        border:2px solid black;
-        table-layout:fixed;
-        border-collapse: collapse;
-        width: 100%;
-      }
-      caption {
-        font-size:150%;
-        font-variant:small-caps;
-      }
-      table.rnk th {
-        background-color:navy;
-        color:white;
-        border-style:none;
-        text-align:center;
-      }
-      table.rnk tr:nth-child(even) {
-        background-color:lightgray;
-        border-style:none;
-      }
-      table.rnk td {
-        text-align:center;
-        border-style:none;
-      }
-      table.vip th {
-        background-color:green;
-        color:white;
-        border-style:none;
-        text-align:center;
-      }
-      table.vip td {
-        text-align:center;
-        border-style:none;
-      }
-      table.vip td:nth-child(odd) {
-        background-color:lightgray;
-      }
-      footer {
-        text-align: center;
-				padding-bottom: 1em;
-        margin: auto;
-        width: 100%;
-        padding: 10px;
-        font-size: 0.8em;
-        font-weight: 300;
-      }
-      code {
-        font-family:monospace;
-        background:rgb(240, 240, 240);
-      }
-      /* Repurpose the <u> tag */
-      u {
-        text-decoration:none;
-        font-variant:small-caps;
-      }
-		</style>
+    <link href="stylesheet.css" rel="stylesheet">
   </head>
   <body>
     <header>
       <h1>The Weekly Argo</h1>
       <hr>
-      <div  style="text-align: left; float: left; font-size: 0.8em;">1st Edition
-        (Special Inaugural)</div>
-      <div  style="text-align: center;font-size: 0.8em;position:relative;right:60px;height:0;margin:0;padding:0">Version
-        1.1❖Server 28</div>
-      <div  style="font-size: 0.8em; float: right; text-align: right;">Friday
-        February 19, 2016</div>
+      <div style="text-align: left; float: left; font-size: 0.8em;">2nd Edition</div>
+      <div style="text-align: center;font-size: 0.8em;position:relative;right:60px;height:0;margin:0;padding:0">Version
+        1❖Server 28</div>
+      <div style="font-size: 0.8em; float: right; text-align: right;">Monday
+        February 29, 2016</div>
       <br>
-      <hr> <img  src="argo.png"  style="display:block; margin:0 auto;"  height="250"
-         width="400">
-      <h2  style="margin:auto;text-align:center;font-family:'DejaVu Serif',serif;font-style:italic;font-size:1em">
+      <hr> <img src="media/argo.png" style="display:block; margin:0 auto;" height="250" width="400">
+      <!--  For some reason the style has to be repeated inline to get it to center properly, will investigate if it's a Gecko bug -->
+      <h2 style="margin:auto;text-align:center;font-family:'DejaVu Serif',serif;font-style:italic;font-size:1em">
         A Knights of the Blood Oath Publication</h2>
     </header>
     <hr>
     <main>
       <section>
         <header>
-          <h3>New Marriage Feature?</h3>
+          <h3>A Brief Primer on Servers</h3>
           <em>By Asuna Yuki</em> </header>
-        A brief foray onto the <a  href="http://sword-of-chaos.wikia.com/">Sword
-          of Chaos Wiki</a> today revealed a newly-written article: <a  href="http://sword-of-chaos.wikia.com/wiki/Marriage">Marriage</a>.
-        Made by the site's administrator at <a  href="http://sword-of-chaos.wikia.com/wiki/Marriage?action=history">7:30
-          Thursday morning</a>, the article promises the addition of holy
-        matrimony (or unholy, as your sentiments may prefer) to Arrendon.<br>
-        <br>
-        There will be three classes of weddings, costing 1,000, 4,000, or 10,000
-        diamonds, with greater rewards for the higher–tier ceremonies. All of
-        them grant a wedding ring to each of the newlyweds. Long–lasting
-        marriages will entitle the spouses to a variety of new titles, going all
-        the way up to one year for the greatest of them.<br>
-        <br>
-        Additionally, a new "affection" system will provide couples with daily
-        and weekly bonuses in exchange for completing certain quests.<br>
-        <br>
-        Marriage will open up to players at level 40. There are no gender
-        restrictions on marriages, but a player may only have one spouse at a
-        time, may not marry two characters belonging to their same account, and
-        after divorce may not remarry for 24 hours.<br>
-        <br>
-        Keep an eye out for a new "Bishop" NPC in the Temple for when this
-        feature is officially released!⚔ </section>
+        <p> A question that I have often been asked by players is, "What are the
+          differences between servers?" As most players have never ventured
+          outside their original server, this is a fair question. First though,
+          a little background.</p>
+        <p>Sword of Chaos uses a system called <em>sharding</em>. This system,
+          and indeed several other technical aspects of <abbr>SoC</abbr> were
+          first developed for the <abbr>MMORPG</abbr> Ultima Online. Each shard
+          consists of of one database host and any number of processing hosts,
+          all physically housed at the same physical location for best
+          performance. It is presently unknown if the chat system is a separate
+          host or not. The database host stores all the players' data, including
+          stats, inventory, and guild membership. The processing hosts, also
+          known as <em>subservers</em>, handle the game's logic, AI, and
+          graphics. The reason players can only see the avatars of other players
+          on the same subserver is because each one renders the main city area
+          independently. The term "server line" in reference to subservers
+          originates from the fact that in Ultima Online, the world map is
+          partitioned into sections, and the player would be assigned the
+          subserver that corresponded with wherever their avatar was. The
+          invisible demarcations between these areas came to be known as server
+          lines.</p>
+        <p>The game's network probably looks something like this:</p>
+        <p> <img src="media/SoC_network.svg" style="width:800px"></p>
+        <p>What is actually different for the player, aside from perhaps slight
+          differences in lag, is really just the other players on the server. No
+          user data, not even VIP status, is shared between servers. They do use
+          a unified login, but there is absolutely no system to port a character
+          over from one server to another.</p>
+        <p>Servers, in addition to their name, are numbered sequentially, in the
+          order of when they were first brought online. Therefore, the lower the
+          server's number is, the more time the oldest players there have had to
+          level up, and therefore the more powerful the top players are on
+          average. That can be intimidating, or even discouraging, to a new
+          player. Because of that, as well as the desire to balance the
+          per-server load, most of the time a new player will be directed to the
+          newest server on the network.</p>
+        <p>Other than that, there are no consistent differences between the game
+          experience on the different servers. While it is true that the
+          character of the social experience is a product of the users, in my
+          analysis and experience, any notion that some servers are "tougher" or
+          "less serious" than others, is a misnomer. ⚔ </p>
+      </section>
       <hr>
       <section>
         <header>
-          <h3  style="text-align:center;font-family:Arial Black,Arial,san-serif">Classifieds</h3>
+          <h3 class="cads">Classifieds</h3>
         </header>
         <table>
           <tbody>
             <tr>
               <td> <code>Aincrad</code> is looking for new members! All
                 applicants in good standing will be accepted. Read our webpage <a
-                   href="https://notehub.org/jnsua">here</a> for more
+                  href="https://notehub.org/jnsua">here</a> for more
                 information. </td>
-              <td> A level 52 <span  style="color:orange">Chrono Talisman
-                  Blueprint</span> with 1833 MDef is being offered for sale. PM
-                <code>[su4ka]</code> for details. </td>
+              <td> Level 4 Guild <code>DarkGale</code> is looking for two
+                players. We are active in guild events, and have Jack Daniels,
+                beer, tacos, and a theater playing Deadpool! PM <code>Bitchboy</code>
+                to apply.</td>
             </tr>
             <tr>
               <td> Guild <code>Shadow69</code> is recruiting active members! We
@@ -153,8 +93,9 @@
                 Join here today! </td>
             </tr>
             <tr>
-              <td> FOR SALE: <span  style="color:orange">Mercury Powder</span>,
-                50 Diamonds. PM <code>Inferno</code>. </td>
+              <td> Level 3 guild <code>Animus35</code> is looking for active
+                new members! Apply directly or PM <code>Xalen Kai</code> for
+                details.</td>
               <td> YOUR AD COULD BE HERE! PM <code>Asuna_Yuki</code> with the
                 contents of your ad and it will be printed at no cost in the
                 next edition of this paper. </td>
@@ -167,7 +108,7 @@
         <header>
           <h3>Rankings</h3>
         </header>
-        <table  class="rnk">
+        <table class="rnk">
           <caption>Level</caption>
           <tbody>
             <tr>
@@ -178,32 +119,32 @@
             <tr>
               <td>1</td>
               <td><code>ChoKangChi</code></td>
-              <td>60(10)</td>
+              <td>60(32)</td>
             </tr>
             <tr>
               <td>2</td>
-              <td><code>nightfury</code></td>
-              <td>60(6)</td>
+              <td><code>Suzanna</code></td>
+              <td>60(30)</td>
             </tr>
             <tr>
               <td>3</td>
-              <td><code>Suzanna</code></td>
-              <td>60(5)</td>
+              <td><code>tommygame</code></td>
+              <td>60(29)</td>
             </tr>
             <tr>
               <td>4</td>
               <td><code>Gblade</code></td>
-              <td>60</td>
+              <td>60(26)</td>
             </tr>
             <tr>
               <td>5</td>
-              <td><code>tommygame</code></td>
-              <td>60</td>
+              <td><code>nightfury</code></td>
+              <td>60(23)</td>
             </tr>
           </tbody>
         </table>
         <br>
-        <table  class="rnk">
+        <table class="rnk">
           <caption>Power</caption>
           <tbody>
             <tr>
@@ -213,33 +154,33 @@
             </tr>
             <tr>
               <td>1</td>
-              <td><code>ChoKangChi</code></td>
-              <td>419274</td>
+              <td><code>Suzanna</code></td>
+              <td>537092</td>
             </tr>
             <tr>
               <td>2</td>
-              <td><code>Suzanna</code></td>
-              <td>415926</td>
+              <td><code>ChoKangChi</code></td>
+              <td>461219</td>
             </tr>
             <tr>
               <td>3</td>
               <td><code>tommygame</code></td>
-              <td>398610</td>
+              <td>446890</td>
             </tr>
             <tr>
               <td>4</td>
-              <td><code>Millie</code></td>
-              <td>390340</td>
+              <td><code>Angel Tania</code></td>
+              <td>431207</td>
             </tr>
             <tr>
               <td>5</td>
-              <td><code>Angel Tania</code></td>
-              <td>333802</td>
+              <td><code>Millie</code></td>
+              <td>420627</td>
             </tr>
           </tbody>
         </table>
         <br>
-        <table  class="rnk">
+        <table class="rnk">
           <caption>PvP</caption>
           <tbody>
             <tr>
@@ -249,155 +190,161 @@
             </tr>
             <tr>
               <td>1</td>
-              <td><code>GreatCthulhu</code></td>
-              <td>1799</td>
+              <td><code>Mrs_Queen</code></td>
+              <td>1690</td>
             </tr>
             <tr>
               <td>2</td>
-              <td><code>tommygame</code></td>
-              <td>1725</td>
+              <td><code>Angel Tania</code></td>
+              <td>1658</td>
             </tr>
             <tr>
               <td>3</td>
               <td><code>Fake</code></td>
-              <td>1683</td>
+              <td>1606</td>
             </tr>
             <tr>
               <td>4</td>
-              <td><code>Death shot</code></td>
-              <td>1677</td>
+              <td><code>tatti</code></td>
+              <td>1589</td>
             </tr>
             <tr>
               <td>5</td>
-              <td><code>Kool</code></td>
-              <td>1631</td>
+              <td><code>GreatCthulhu</code></td>
+              <td>1544</td>
             </tr>
           </tbody>
         </table>
       </section>
       <section>
-        <header>
-          <h3>VIP Upgrades</h3>
-          <table  class="vip">
-            <tbody>
-              <tr>
-                <th> 3 </th>
-                <th> 4 </th>
-                <th> 5 </th>
-                <th> 6 </th>
-                <th> 7 </th>
-                <th> 8 </th>
-              </tr>
-              <tr>
-                <td><code>zelvierfel</code> </td>
-                <td><code>MaDaaFaka</code><br>
-                </td>
-                <td><br>
-                </td>
-                <td><br>
-                </td>
-                <td><code>SCADA</code></td>
-                <td><code>chela1989</code></td>
-              </tr>
-              <tr>
-                <td><code>rumier</code><br>
-                </td>
-                <td><br>
-                </td>
-                <td><br>
-                </td>
-                <td><br>
-                </td>
-                <td><br>
-                </td>
-                <td><code>cokeze</code></td>
-              </tr>
-              <tr>
-                <td><code>Azuier</code></td>
-                <td> <br>
-                </td>
-                <td> <br>
-                </td>
-                <td> <br>
-                </td>
-                <td> <br>
-                </td>
-                <td> <br>
-                </td>
-              </tr>
-              <tr>
-                <td><code>Frosticles</code></td>
-                <td> <br>
-                </td>
-                <td> <br>
-                </td>
-                <td> <br>
-                </td>
-                <td> <br>
-                </td>
-                <td> <br>
-                </td>
-              </tr>
-              <tr>
-                <td><code>Jazzine</code></td>
-                <td> <br>
-                </td>
-                <td> <br>
-                </td>
-                <td> <br>
-                </td>
-                <td> <br>
-                </td>
-                <td> <br>
-                </td>
-              </tr>
-              <tr>
-                <td><code>kitania</code></td>
-                <td> <br>
-                </td>
-                <td> <br>
-                </td>
-                <td> <br>
-                </td>
-                <td> <br>
-                </td>
-                <td> <br>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <p><br>
-          </p>
-        </header>
+        <h3>VIP Upgrades</h3>
+        <p><br>
+        </p>
+        Congratulations to <code>Millie</code> for being the first player on
+        this server to ever reach VIP 13!<br>
+        <br>
+        Also to:<br>
+        <ul>
+          <li><code>Dragold</code> for VIP 3</li>
+          <li><code>Wraith</code> for VIP5</li>
+          <li><code>PotaQuien</code> for VIP3</li>
+          <li><code>�∤���</code> for VIP3</li>
+          <li><code>[Gouther]</code> for VIP4</li>
+          <li><code>Kagee</code> for VIP6</li>
+        </ul>
+      </section>
+      <section>
+        <h3>False Idol</h3>
+        <p>Top damage dealers:</p>
+        <ul>
+          <li><code>GreatCthulhu</code></li>
+          <li><code>tommygame</code></li>
+          <li><code>Bitchboy</code></li>
+        </ul>
+        <p>Final attack by <code>GreatCthulhu</code>.</p>
         <br>
       </section>
       <section>
-        <header>
-          <h4>King Throne</h4>
-        </header>
-        <ol>
-          <li><code>Angel Tania</code></li>
-          <li><code>AliceNina</code></li>
-          <li><code>ChoKangChi</code></li>
-        </ol>
+        <h3>Banns of Marriage</h3>
+        <table class="vip">
+          <caption style="font-size:80%;font-variant:normal;font-style:italic">
+            Congratulations to all our newlyweds! </caption> <colgroup> <col
+              style="width:4ch"> <col style="width:auto"> <col style="width:3ch">
+            <col style="width:auto"> </colgroup>
+          <tbody>
+            <tr>
+              <th>#</th>
+              <th colspan="3"><br>
+              </th>
+            </tr>
+            <tr>
+              <td>1<br>
+              </td>
+              <td><code>Millie</code><br>
+              </td>
+              <td>+</td>
+              <td><code>Mø_<br>
+                </code> </td>
+            </tr>
+            <tr>
+              <td>3<br>
+              </td>
+              <td><code><span>bitchboy</span></code><br>
+              </td>
+              <td>+</td>
+              <td><code>chela1989<br>
+                </code> </td>
+            </tr>
+            <tr>
+              <td>4<br>
+              </td>
+              <td><code>import2<br>
+                </code> </td>
+              <td>+</td>
+              <td><code>ayeL<br>
+                </code> </td>
+            </tr>
+            <tr>
+              <td>7<br>
+              </td>
+              <td><code>tommygame<br>
+                </code> </td>
+              <td>+</td>
+              <td><code>PortaQuien<br>
+                </code> </td>
+            </tr>
+            <tr>
+              <td>8<br>
+              </td>
+              <td><code>ChoKangChi<br>
+                </code> </td>
+              <td>+</td>
+              <td><code><span>AngelTania</span></code><br>
+              </td>
+            </tr>
+            <tr>
+              <td>28<br>
+              </td>
+              <td><code>Kaliman<br>
+                </code> </td>
+              <td>+</td>
+              <td><code>LunaBelle<br>
+                </code> </td>
+            </tr>
+            <tr>
+              <td>32</td>
+              <td><code>RecklessHero<br>
+                </code> </td>
+              <td>+</td>
+              <td><code>kirito xena<br>
+                </code> </td>
+            </tr>
+            <tr>
+              <td>33</td>
+              <td><code>lux2fed<br>
+                </code> </td>
+              <td>+</td>
+              <td><code>Fiora main<br>
+                </code> </td>
+            </tr>
+            <tr>
+              <td>80</td>
+              <td><code>GreatCthulhu</code></td>
+              <td>+</td>
+              <td><code>Rayku</code></td>
+            </tr>
+          </tbody>
+        </table>
+        <p><br>
+        </p>
       </section>
-      <section>
-        <header>
-          <h4>False Idol</h4>
-        </header>
-        <ol>
-          <li><code>Vivicutie</code></li>
-          <li><code>GreatCthulhu</code></li>
-          <li><code>nightfury</code></li>
-        </ol>
-        Last attack by <code>tommygame</code>. </section>
       <hr>
-      <footer> <a  rel="license"  href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img
-             alt="Creative Commons License"  style="border-width:0"  src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a><br>
-        <span  xmlns:dct="http://purl.org/dc/terms/"  property="dct:title">"Weekly
-          Argo"</span> by <span  xmlns:cc="http://creativecommons.org/ns#"  property="cc:attributionName">The
-          Knights of the Blood Oath</span> is licensed under a <a  rel="license"
-           href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+      <footer> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img
+            alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a><br>
+        <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">"Weekly
+          Argo"</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">The
+          Knights of the Blood Oath</span> is licensed under a <a rel="license"
+          href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
           Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.<br>
         <br>
         All copyrighted materials herein used under the fair use doctrine of US
